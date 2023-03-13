@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tryplore_shop/homepage.dart';
+import 'package:tryplore_shop/pages/login_page/forgot_password.dart';
 import 'package:tryplore_shop/pages/onboarding_page/first_page.dart';
 import 'package:tryplore_shop/pages/pages.dart';
 
@@ -14,13 +14,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      debugShowCheckedModeBanner: false,
-      home: const OnboardingPage()
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        debugShowCheckedModeBanner: false,
+        home: const ForgotPass());
   }
 }
-

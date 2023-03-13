@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:tryplore_shop/pages/login_page/signup_page.dart';
 
-import '../../common/constant/app_colors.dart';
 import '../../common/constant/app_textstyle.dart';
 import '../../common/widgets/button/custom_elevated_button.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<SignUp> createState() => SignUpState();
 }
 
-class _LoginState extends State<Login> {
+class SignUpState extends State<SignUp> {
   bool isChecked = false;
 
   @override
@@ -26,11 +24,27 @@ class _LoginState extends State<Login> {
             child: Column(
               children: [
                 Text(
-                  'Log into\nYour acoount',
+                  'Create\nYour acoount',
                   style: AppTextStyle.headline3M(txtColor: Colors.white),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 70,
+                ),
+                const TextField(
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    focusColor: Colors.white,
+                    fillColor: Colors.white,
+                    hintText: "Enter your Name",
+                    labelText: " Name",
+                    hintStyle: TextStyle(color: Colors.grey),
+                    labelStyle: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
                 ),
                 const TextField(
                   style: TextStyle(color: Colors.white),
@@ -65,7 +79,7 @@ class _LoginState extends State<Login> {
                 CheckboxListTile(
                   value: isChecked,
                   title: Text(
-                    "Remember me",
+                    "By signing up you agree to the terms of service and privacy policy",
                     style: AppTextStyle.bodyM(txtColor: Colors.grey),
                   ),
                   onChanged: (newBool) {
@@ -80,9 +94,9 @@ class _LoginState extends State<Login> {
                 SizedBox(
                   height: 10,
                 ),
-                CustomElevatedButton(
+                CustomElevatedButton( 
                   btnColor: Colors.blue,
-                  txtLabel: 'Log In',
+                  txtLabel: 'Sign Up',
                   txtColor: Colors.white,
                 ),
                 SizedBox(
@@ -91,39 +105,32 @@ class _LoginState extends State<Login> {
                 CustomElevatedButton(
                   btnColor: Colors.blue,
                   icons: Icons.facebook,
-                  txtLabel: 'Login With Facebook',
+                  txtLabel: 'Sign Up With Facebook',
                   txtColor: Colors.white,
                 ),
-                SizedBox(
-                  height: 130,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Don't have an account ? ",
-                      style: AppTextStyle.bodyM(txtColor: Colors.grey),
-                    ),
-                    Column(
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => SignUp(),
-                              ),
-                            );
-                          },
-                          child: Text(
-                            'Sign-Up',
-                            style: AppTextStyle.bodyM(txtColor: Colors.grey),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                )
+                // SizedBox(
+                //   height: 130,
+                // ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                //     Text(
+                //       "Don't have an account ? ",
+                //       style: AppTextStyle.bodyM(txtColor: Colors.grey),
+                //     ),
+                //     Column(
+                //       children: [
+                //         TextButton(
+                //           onPressed: () {},
+                //           child: Text(
+                //             'Sign-Up',
+                //             style: AppTextStyle.bodyM(txtColor: Colors.grey),
+                //           ),
+                //         ),
+                //       ],
+                //     ),
+                //   ],
+                // )
               ],
             ),
           ),
