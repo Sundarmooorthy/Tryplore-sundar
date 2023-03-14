@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tryplore_shop/pages/login_page/forgot_password.dart';
+import 'package:tryplore_shop/pages/login_page/phone_verification.dart';
 import 'package:tryplore_shop/pages/onboarding_page/first_page.dart';
 import 'package:tryplore_shop/pages/pages.dart';
 
@@ -19,6 +20,6 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         debugShowCheckedModeBanner: false,
-        home: const ForgotPass());
+        home: const PhoneVerification());
   }
 }

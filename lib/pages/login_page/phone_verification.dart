@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:tryplore_shop/common/widgets/button/custom_elevated_button.dart';
 
 import '../../common/constant/app_textstyle.dart';
 
@@ -10,7 +12,6 @@ class PhoneVerification extends StatefulWidget {
 }
 
 class Phone_VerificationState extends State<PhoneVerification> {
-  @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
@@ -25,7 +26,7 @@ class Phone_VerificationState extends State<PhoneVerification> {
                     "Enter the code\nto verify your phone number",
                     style: AppTextStyle.headline3M(txtColor: Colors.black),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   Text(
@@ -35,6 +36,102 @@ class Phone_VerificationState extends State<PhoneVerification> {
                   ),
                   const SizedBox(
                     height: 70,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      SizedBox(
+                        width: 60,
+                        height: 65,
+                        child: TextFormField(
+                          onChanged: (value) {
+                            if (value.length == 1) {
+                              FocusScope.of(context).nextFocus();
+                            }
+                          },
+                          onSaved: (pin1) {},
+                          style:
+                              AppTextStyle.subTitle1M(txtColor: Colors.black),
+                          keyboardType: TextInputType.number,
+                          textAlign: TextAlign.center,
+                          inputFormatters: [
+                            LengthLimitingTextInputFormatter(1),
+                            FilteringTextInputFormatter.digitsOnly,
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: 60,
+                        height: 65,
+                        child: TextFormField(
+                          onChanged: (value) {
+                            if (value.length == 1) {
+                              FocusScope.of(context).nextFocus();
+                            }
+                          },
+                          onSaved: (pin2) {},
+                          style:
+                              AppTextStyle.subTitle1M(txtColor: Colors.black),
+                          keyboardType: TextInputType.number,
+                          textAlign: TextAlign.center,
+                          inputFormatters: [
+                            LengthLimitingTextInputFormatter(1),
+                            FilteringTextInputFormatter.digitsOnly,
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: 60,
+                        height: 65,
+                        child: TextFormField(
+                          onChanged: (value) {
+                            if (value.length == 1) {
+                              FocusScope.of(context).nextFocus();
+                            }
+                          },
+                          onSaved: (pin3) {},
+                          style:
+                              AppTextStyle.subTitle1M(txtColor: Colors.black),
+                          keyboardType: TextInputType.number,
+                          textAlign: TextAlign.center,
+                          inputFormatters: [
+                            LengthLimitingTextInputFormatter(1),
+                            FilteringTextInputFormatter.digitsOnly,
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: 60,
+                        height: 65,
+                        child: TextFormField(
+                          onChanged: (value) {
+                            if (value.length == 1) {
+                              FocusScope.of(context).nextFocus();
+                            }
+                          },
+                          onSaved: (pin4) {},
+                          style:
+                              AppTextStyle.subTitle1M(txtColor: Colors.black),
+                          keyboardType: TextInputType.number,
+                          textAlign: TextAlign.center,
+                          inputFormatters: [
+                            LengthLimitingTextInputFormatter(1),
+                            FilteringTextInputFormatter.digitsOnly,
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Row(
+                    children: [
+                      TextButton(
+                        onPressed: () {},
+                        child: Text("Send a new code !"),
+                      ),
+                    ],
                   ),
                 ],
               ),

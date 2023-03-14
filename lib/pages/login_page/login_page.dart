@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tryplore_shop/pages/login_page/signup_page.dart';
 
-import '../../common/constant/app_colors.dart';
+// import '../../common/constant/app_colors.dart';
 import '../../common/constant/app_textstyle.dart';
 import '../../common/widgets/button/custom_elevated_button.dart';
 
